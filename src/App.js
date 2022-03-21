@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import Grid from "./Components/Grid.js";
+import Table from "./Components/Table.js";
+import { Button } from "./Components/Button.js";
+
+import { useState } from "react";
+
+import "./App.css";
 
 function App() {
+  const hello = "Hello, stranger!";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      return <ShowHeader />
+      <Button>teste</Button>
+      <ShowBody value={hello} />;
+    </div>
+  );
+}
+
+function ShowHeader() {
+  return (
+    <header
+      className="App-header"
+      style={{ background: "lightgray", height: 100 }}
+    >
+      <h3> Cabeçalho</h3>
+    </header>
+  );
+}
+
+function ShowBody(props) {
+  return (
+    <div style={{ background: "lightblue", height: 300, fontSize: 20 }}>
+      {props.value}
     </div>
   );
 }
