@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import Grid from "./Components/Grid.js";
 import Table from "./Components/Table.js";
 import { Button } from "./Components/Button.js";
+import Todo from "./Components/Todo.js";
 
 import { useState } from "react";
 
@@ -12,19 +13,16 @@ function App() {
 
   return (
     <div className="App">
-      return <ShowHeader />
-      <Button>teste</Button>
-      <ShowBody value={hello} />;
+      <ShowHeader />
+      <ShowBody value={<Todo />} />
+      <Button />
     </div>
   );
 }
 
 function ShowHeader() {
   return (
-    <header
-      className="App-header"
-      style={{ background: "lightgray", height: 100 }}
-    >
+    <header className="App-header">
       <h3> Cabeçalho</h3>
     </header>
   );
@@ -32,7 +30,7 @@ function ShowHeader() {
 
 function ShowBody(props) {
   return (
-    <div style={{ background: "lightblue", height: 300, fontSize: 20 }}>
+    <div style={{ background: "lightblue", height: 500, fontSize: 20 }}>
       {props.value}
     </div>
   );
