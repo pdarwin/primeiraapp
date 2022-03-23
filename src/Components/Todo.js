@@ -12,7 +12,7 @@ function Todo({ todo, handleToggle }) {
 
   function handleToggle(id) {
     let mapped = todoList.map((task) => {
-      return task.id === Number(id)
+      return task.id === Number(id) // comparação estrita
         ? { ...task, complete: !task.complete }
         : { ...task };
     });

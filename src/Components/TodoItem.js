@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoItem = ({ todo, handleToggle }) => {
+const TodoItem = ({ todoItem, handleToggle }) => {
   const handleClick = (e) => {
     e.preventDefault();
     handleToggle(e.currentTarget.id);
@@ -8,14 +8,14 @@ const TodoItem = ({ todo, handleToggle }) => {
 
   return (
     <div
-      id={todo.id}
-      key={todo.id + todo.task}
+      id={todoItem.id}
+      key={todoItem.id + todoItem.task}
       name="todo"
-      value={todo.id}
+      value={todoItem.id}
       onClick={handleClick}
-      className={todo.complete ? "todo strike" : "todo"}
+      className={todoItem.complete ? "todo strike" : "todo"}
     >
-      {todo.task}
+      {todoItem.task}
     </div>
   );
 };

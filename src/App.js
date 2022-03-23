@@ -30,9 +30,7 @@ function ShowHeader() {
 
 function ShowBody(props) {
   return (
-    <div style={{ background: "lightblue", height: 500, fontSize: 20 }}>
-      {props.value}
-    </div>
+    <div style={{ background: "lightblue", fontSize: 20 }}>{props.value}</div>
   );
 }
 
